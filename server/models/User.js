@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
     unique: true
   },
   password :{type:String, required:true},
-  
+  savedrecipes:[{type: { type: mongoose.Schema.Types.ObjectId, ref: "recipes", required: true }}]
 });
 
 // Step 2: Create a Model
